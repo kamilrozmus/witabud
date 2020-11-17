@@ -24,3 +24,20 @@ export default {
   }),
 };
 </script>
+<style lang="scss">
+.v-application {
+  font-family: 'Spartan', sans-serif;
+  letter-spacing: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .v-application {
+    overflow-x: hidden;
+  }
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+</style>

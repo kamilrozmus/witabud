@@ -111,14 +111,10 @@ h1 {
   opacity: 100%;
   line-height: 145%;
   font-weight: 800;
-  font-family: 'LeagueSpartan', sans-serif;
   text-transform: uppercase;
   height: 50px;
+  padding-top: 5px;
   cursor: pointer;
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
   &.service {
     color: $black-primary;
     background: $yellow-primary;

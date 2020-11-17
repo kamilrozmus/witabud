@@ -1,74 +1,76 @@
 <template>
-  <v-app-bar
-    app
-    absolute
-    color="transparent"
-    dark
-    flat
-    class="header"
-  >
-    <div class="d-flex align-center">
+  <nav>
+    <div>
       <v-img
         alt="logo"
-        class="shrink mr-2"
-        contain
         src="@/assets/img/logo-black.png"
         transition="scale-transition"
       />
     </div>
-
-    <v-spacer></v-spacer>
-
-    <nav>
-      <ul>
-        <li><a href="#">Strona główna</a></li>
-        <li><a href="#">O firmie</a></li>
-        <li><a href="#">Usługi</a></li>
-        <li><a href="#">Realizacje</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
-    </nav>
-  </v-app-bar>
+    <ul class="links" :class="{ 'nav-active': isActive}">
+      <li><a href="#">Strona główna</a></li>
+      <li><a href="#">O firmie</a></li>
+      <li><a href="#">Usługi</a></li>
+      <li><a href="#">Realizacje</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+    <button @click="isActive = !isActive">
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </button>
+  </nav>
 </template>
+<script>
+
+export default {
+  data() {
+    return {
+      isActive: false
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '@/assets/styles.scss';
-.header {
-  margin: auto;
-  width: 66%;
+* {
+  margin-top: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 nav {
-  float: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: transparent;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links li {
   list-style: none;
-
+  margin: 0 15px;
+  margin-top: 10px;
 }
 
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding: 23px 0 12px 0;
-  position: relative;
-
-}
-
-nav a {
-  color: black;
+.links a {
+  color: $black-primary;
   text-decoration: none;
-  font-weight: 800;
-  font-family: 'LeagueSpartan', sans-serif;
   text-transform: uppercase;
-  padding: 21px 10px;
-  font-size: 14px;
-
+  font-size: 16px;
+  padding: 24px 10px;
   &:hover {
     border-bottom: 5px solid $yellow-primary;
     color: $yellow-primary;
-    margin-top: 15px;
+    margin-top: 5px;
   }
   &:focus {
     outline: none;
@@ -76,4 +78,70 @@ nav a {
   }
 }
 
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3.5px;
+  background-color: $black-primary;
+  margin: 5.5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .links {
+    display: flex;
+    margin: 0px;
+
+    li {
+      margin: 0 5px;
+    }
+
+    a {
+      font-size: 13px;
+      padding: 30px 10px;
+      &:hover {
+        color: $yellow-primary;
+        border-bottom: 5px solid $yellow-primary;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    margin-top: 9vh;
+    height: calc(100% - 9vh);
+    background-color: $dark-bg;
+    z-index: 9999;
+    width: 250px;
+    align-items: left;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      font-size: 13px;
+      color: $white-primary;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
 </style>
