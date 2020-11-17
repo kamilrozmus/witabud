@@ -34,27 +34,9 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-
     <div class="services">
       <div v-for="(item, i) in servicesImg" :key="i" class="child">
         <img :src="item.src" class="img-child">
-      </div>
-    </div>
-
-    <div class="reviews-panel">
-      <div class="childs">
-        <div class="child my-5">
-          <v-avatar class="mt-6">
-            <img
-              src="https://picsum.photos/200"
-              alt="avatar"
-            >
-          </v-avatar>
-          <div class="ml-5" style="max-width: 270px;">
-            <div>Joanna Kowalska</div>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
-        </div>
-        </div>
       </div>
     </div>
   </div>
@@ -138,6 +120,20 @@ h1 {
   }
 }
 
+.slider-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: translateY(5%);
+  .title {
+    font-size: 18px !important;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -152,36 +148,5 @@ h1 {
 .img-child {
   width: 100%;
   max-height: 300px;
-}
-
-.reviews-panel {
-  padding-top: 0;
-  display: flex;
-  justify-content: center;
-  background: $dark-bg;
-
-  .childs {
-    display: flex;
-    justify-content: center;
-
-    .child {
-      display: flex;
-      border: 1px solid white;
-    }
-  }
-}
-
-.slider-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform: translateY(5%);
-  .title {
-    font-size: 18px !important;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
 }
 </style>

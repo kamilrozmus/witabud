@@ -133,6 +133,10 @@ nav {
     a {
       font-size: 13px;
       color: $white-primary;
+      &:hover {
+        color: $yellow-primary;
+        border-bottom: none;
+      }
     }
   }
 
