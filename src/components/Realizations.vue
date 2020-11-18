@@ -1,15 +1,17 @@
 <template>
   <div class="content">
     <div class="header">
-      <div>
-        <h1>
-          Realizacje
-        </h1>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate harum necessitatibus ratione sunt ipsa.
-        </p>
+      <div class="header-title">
+        <div>
+          <h1>
+            Realizacje
+          </h1>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate harum necessitatibus ratione sunt ipsa.
+          </p>
+        </div>
       </div>
       <div>
         <div class="buttons">
@@ -37,11 +39,12 @@
     </div>
     <div v-for="(item, i) in items" :key="i" class="item-done">
       <img :src="item.src">
-      <div class="text">
-        <div class="title">{{ item.title }}</div>
+      <div class="text" >
+        <div class="title ">{{ item.title }}</div>
         <div class="desc">{{ item.desc }}</div>
       </div>
     </div>
+
   </div>
 </template>
 <script>
@@ -81,12 +84,14 @@ export default {
 
 .header {
   width: 20%;
-  margin-right: 40px;
+  margin-right: 20px;
   h1 {
+    font-size: 22px;
     text-transform: uppercase;
   }
   p {
     color: $description;
+    font-size: 13px;
     font-weight: 200 !important;
   }
   button {
@@ -97,8 +102,7 @@ export default {
 
 .item-done {
   padding: 25px;
-  margin: 0 10px 0 10px;
-  width: 300px;
+  width: 350px;
 
   .text {
     border: 1px solid grey;
@@ -122,6 +126,34 @@ export default {
   }
 }
 
+@media screen and (max-width: 1235px) {
+
+.content {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+}
+
+.header {
+  width: 90vw;
+  .header-title {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin-left: 20px;
+      margin-top: 1%;
+    }
+
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+}
 @media screen and (max-width: 768px) {
 
   .content {
@@ -131,19 +163,23 @@ export default {
     flex-wrap: wrap;
   }
   .header {
-    text-align: justify;
+  width: 90vw;
+  .header-title {
     display: flex;
-    margin-top: 30px;
-    width: 500px;
-
-    
+    justify-content: space-between;
+    margin-top: 20px;
     p {
-      width: 350px;
+      margin-left: 20px;
+      margin-top: 1%;
     }
+
   }
   .buttons {
-      margin-bottom: 30px;
-    }
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
   .item-done {
     margin: 0 20px;
     flex: 1 1 100%;
@@ -190,6 +226,13 @@ export default {
       flex-direction: column;
       margin-top: 30px;
       margin-right: 20px;
+      .header-title {
+        display: flex;
+        flex-direction: column;
+        h1 {
+          margin-left: 5%;
+        }
+      }
       .buttons {
         display: flex;
         justify-content: space-between;

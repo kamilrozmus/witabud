@@ -6,9 +6,8 @@
         :key="i"
         prev-icon="mdi-arrow-right"
         next-icon="mdi-arrow-right"
-        class="sheet"
       >
-        <v-sheet>
+        <v-sheet class="sheet">
           <v-img :src="item.src" gradient="to top right, rgba(0,0,0,.33), rgba(0,0,0,.7)" style="width: 100%;">
             <div class="slide-desc">
               <h1>
@@ -129,9 +128,6 @@ h1 {
     transform: translate(20%, 85%);
   }
 
-  .sheet {
-    background: rgba(0,0,0,0.5);
-  }
 
 .slider-footer {
   display: flex;
@@ -234,7 +230,7 @@ h1 {
   }
 
   .slider-btn {
-    transform: translateX(35%);
+    transform: translateX(10%);
     font-size: 13px;
     margin: 2px;
     &.service {
@@ -263,9 +259,20 @@ h1 {
       font-size: 25px;
     }
   }
+  .slider-btn {
+    transform: translateX(40%);
+    font-size: 13px;
+    margin: 2px;
+    &.service {
+      width: 150px;
+    }
+    &.phone {
+      width: 270px;
+    }
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
 .slider-footer {
     transform: translateY(-20%);
@@ -273,7 +280,7 @@ h1 {
 
   }
   h1 {
-    font-size: 30px;
+    font-size: 28px;
     margin-left: 10px;
     text-align: justify;
     text-transform: uppercase;
@@ -288,15 +295,40 @@ h1 {
   .slider-btn {
     transform: translate(45%, -45%);
     font-size: 10px;
-    margin: 2px;
     &.service {
-      width: 120px;
+      width: 120px; 
     }
     &.phone {
       width: 180px;
     }
   }
 
+}
+
+@media screen and (max-width: 580px) {
+h1 {
+    font-size: 28px;
+    margin-left: 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    transform: translate(1%, -25%);
+    .name {
+      transform: translate(15%, -40%);
+      margin: auto;
+      font-size: 18px;
+    }
+  }
+
+  .slider-btn {
+    transform: translate(18%, -45%);
+    font-size: 10px;
+    &.service {
+      width: 120px; 
+    }
+    &.phone {
+      width: 180px;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -342,6 +374,34 @@ h1 {
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  h1 {
+    padding-top: 100px;
+    font-size: 28px;
+    margin-left: 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    transform: translate(-14%, -45%);
+    .name {
+      transform: translate(22%, -40%);
+      margin: auto;
+      font-size: 22px;
+    }
+  }
+  .slider-btn {
+    transform: translate(-8%, -150%);
+    font-size: 13px;
+    font-weight: bold !important;
+    margin: 2px;
+    &.service {
+      width: 290px;
+    }
+    &.phone {
+      width: 290px;
+    }
   }
 }
 </style>

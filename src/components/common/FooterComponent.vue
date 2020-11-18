@@ -1,18 +1,5 @@
 <template>
-  <div class="container">
-    <div class="alert">
-      <div class="message">
-        {{ alertMsg }}
-      </div>
-      <div class="phone">
-        <ul class="list">
-          <li>Zadzwoń</li>
-          <li class="mx-4"><img src="@/assets/img/phone-ico.png" style="width: 30px; height: 30px;" /></li>
-          <li>+48 615 152 156</li>
-        </ul>
-      </div>
-    </div>
-
+  <footer>
     <div class="content">
       <div class="info">
         <div>
@@ -60,57 +47,21 @@
       </div>
     </div>
 
-    <div class="copyright">
+    <!-- <div class="copyright">
       {{ "2020 © Made with passion by Kamil Rozmus" }}
-    </div>
-  </div>
+    </div> -->
+  </footer>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      alertMsg: 'Nagły wypadek? Potrzebujesz szybkiej pomocy?'
-    }
-  }
-}
-</script>
 <style lang="scss" scoped>
 @import '@/assets/styles.scss';
 
-.container {
+footer {
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
-  color: grey;
-}
-
-.alert {
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px 0 15px;
-  background-color: $yellow-primary;
-  width: 100vw;
-  height: 70px;
-  .list {
-    display: flex;
-    justify-content: space-between;
-    li {
-      list-style: none;
-    }
-  }
-  .message {
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-  }
-  .phone {
-    display: flex;
-    justify-content: space-between;
-    font-size: 21px;
-    color: $black-primary;
-    font-weight: bold;
-  }
+  color: white;
+  font-size: 12px;
 }
 
 .header {
@@ -127,7 +78,8 @@ export default {
 .links {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 0 0 30px 0;
+  font-size: 12px;
   li {
     list-style: none;
   }
@@ -150,15 +102,14 @@ export default {
 .media {
   display: flex;
   justify-content: space-between;
-  width: 52%;
+  width: 65%;
   margin: 50px 0;
 }
 
 .info {
   background-color: $black-primary !important;
   width: 65vw !important;
-  padding-left: 14%;
-  height: 600px;
+  padding-left: 20%;
   padding-right: 30px;
   margin-top: 50px;
 
@@ -174,4 +125,33 @@ export default {
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 1024px) {
+  footer {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .info {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    font-size: 9px;
+  }
+
+  .info {
+    width: 100vw !important;
+  }
+
+  .links {
+    font-size: 9px;
+  }
+
+}
+
 </style>
