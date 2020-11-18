@@ -148,4 +148,12 @@ nav {
 .nav-active {
   transform: translateX(0%);
 }
+
+@media screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+  }
+}
 </style>

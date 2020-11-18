@@ -1,14 +1,15 @@
 <template>
   <div>
-    <v-carousel v-model="model" hide-delimiters height="auto">
+    <v-carousel v-model="model" hide-delimiters height="auto" class="sheet">
       <v-carousel-item
         v-for="(item, i) in slides"
         :key="i"
         prev-icon="mdi-arrow-right"
         next-icon="mdi-arrow-right"
+        class="sheet"
       >
         <v-sheet>
-          <v-img :src="item.src" style="width: 100%;">
+          <v-img :src="item.src" gradient="to top right, rgba(0,0,0,.33), rgba(0,0,0,.7)" style="width: 100%;">
             <div class="slide-desc">
               <h1>
                 <div class="name">Witold Goj</div>
@@ -128,6 +129,10 @@ h1 {
     transform: translate(20%, 85%);
   }
 
+  .sheet {
+    background: rgba(0,0,0,0.5);
+  }
+
 .slider-footer {
   display: flex;
   flex-direction: column;
@@ -192,6 +197,7 @@ h1 {
   }
   .slider-footer {
     transform: translateY(-12%);
+    margin-bottom: 100px;
   }
 }
 
@@ -214,12 +220,36 @@ h1 {
     display: flex;
     justify-content: center;
     align-content: flex-end;
+    margin-bottom: 100px;
+  }
+   .child {
+    flex: 1 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .slider-footer {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+  }
+
+  .slider-btn {
+    transform: translateX(35%);
+    font-size: 13px;
+    margin: 2px;
+    &.service {
+      width: 150px;
+    }
+    &.phone {
+      width: 270px;
+    }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .slider-footer {
     transform: translateY(-14%);
+    margin-bottom: 100px;
   }
   h1 {
     font-size: 35px;
@@ -233,26 +263,85 @@ h1 {
       font-size: 25px;
     }
   }
-  .child {
-  flex: 1 1 50%;
-  display: flex;
-  flex-wrap: wrap;
 }
-  .slider-footer {
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
+
+@media screen and (max-width: 768px) {
+
+.slider-footer {
+    transform: translateY(-20%);
+    margin-bottom: 100px;
+
+  }
+  h1 {
+    font-size: 30px;
+    margin-left: 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    transform: translate(5%, -25%);
+    .name {
+      transform: translate(11%, -40%);
+      margin: auto;
+      font-size: 18px;
+    }
   }
 
   .slider-btn {
-    font-size: 13px;
+    transform: translate(45%, -45%);
+    font-size: 10px;
     margin: 2px;
     &.service {
-      width: 150px;
+      width: 120px;
     }
     &.phone {
-      width: 270px;
+      width: 180px;
     }
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .slider-footer {
+    transform: translateY(-25%);
+    .title {
+      font-size: 14px !important;
+      font-weight: 600;
+      margin-top: 80px;
+    }
+    button .v-icon {
+      margin-bottom: 35px;
+    }
+  }
+  h1 {
+    padding-top: 100px;
+    font-size: 30px;
+    margin-left: 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    transform: translate(-10%, -45%);
+    .name {
+      transform: translate(18%, -40%);
+      margin: auto;
+      font-size: 22px;
+    }
+  }
+
+  .slider-btn {
+    transform: translate(1%, -150%);
+    font-size: 13px;
+    font-weight: bold !important;
+    margin: 2px;
+    &.service {
+      width: 290px;
+    }
+    &.phone {
+      width: 290px;
+    }
+  }
+
+  .child {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 </style>

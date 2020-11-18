@@ -58,6 +58,9 @@
       border: 0.1px solid #393939;
       padding: 14px 28px;
       margin: 0 10px;
+      .v-avatar img {
+        border: 2px solid $yellow-primary;
+      }
       .name {
         //color
       }
@@ -81,6 +84,39 @@
         .v-avatar {
           margin-bottom: 10%;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .childs {
+    margin: 0 20px;
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .child {
+      width: 80vw;
+      text-align: center;
+      .v-avatar {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .childs {
+    margin: 0 40px;
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .child {
+      text-align: center;
+      .v-avatar {
+        margin-bottom: 10%;
       }
     }
   }
