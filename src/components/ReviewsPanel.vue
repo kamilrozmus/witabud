@@ -8,10 +8,34 @@
             alt="avatar"
           >
         </v-avatar>
-        <div class="ml-5" style="max-width: 270px;">
+        <div class="ml-5" style="max-width: 250px;">
           <div>Joanna Kowalska</div>
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+          <span class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+        </div>
       </div>
+      <div class="child my-5">
+        <v-avatar class="mt-6">
+          <img
+            src="https://picsum.photos/202"
+            alt="avatar"
+          >
+        </v-avatar>
+        <div class="ml-5" style="max-width: 250px;">
+          <div class="name">Joanna Kowalska</div>
+          <span class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+        </div>
+      </div>
+      <div class="child my-5">
+        <v-avatar class="mt-6">
+          <img
+            src="https://picsum.photos/201"
+            alt="avatar"
+          >
+        </v-avatar>
+        <div class="ml-5" style="max-width: 250px;">
+          <div>Joanna Kowalska</div>
+          <span class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+        </div>
       </div>
     </div>
   </div>
@@ -31,7 +55,33 @@
 
     .child {
       display: flex;
-      border: 1px solid white;
+      border: 0.1px solid #393939;
+      padding: 14px 28px;
+      margin: 0 10px;
+      .name {
+        //color
+      }
+
+    }
+  }
+  .review-desc {
+    font-weight: 300;
+    color: #797979;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .childs {
+      margin: 0 40px;
+
+      .child {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .v-avatar {
+          margin-bottom: 10%;
+        }
+      }
     }
   }
 }

@@ -1,16 +1,15 @@
 <template>
   <div>
-    <v-carousel v-model="model" hide-delimiters height="880px">
+    <v-carousel v-model="model" hide-delimiters height="auto">
       <v-carousel-item
         v-for="(item, i) in slides"
         :key="i"
-        transition="fade-transition"
         prev-icon="mdi-arrow-right"
         next-icon="mdi-arrow-right"
       >
         <v-sheet>
           <v-img :src="item.src" style="width: 100%;">
-            <div style="transform: translate(20%, 90%);">
+            <div class="slide-desc">
               <h1>
                 <div class="name">Witold Goj</div>
                 <div>Usługi remontowo</div>
@@ -37,6 +36,7 @@
     <div class="services">
       <div v-for="(item, i) in servicesImg" :key="i" class="child">
         <img :src="item.src" class="img-child">
+        <button class="service-btn">{{ item.title }}</button>
       </div>
     </div>
   </div>
@@ -56,15 +56,19 @@
       servicesImg: [
         {
           src: require('@/assets/img/painting.png'),
+          title: 'Malowanie'
         },
         {
-          src: require('@/assets/img/cutting.png')
+          src: require('@/assets/img/cutting.png'),
+          title: 'Tapetowanie'
         },
         {
-          src: require('@/assets/img/floor.png')
+          src: require('@/assets/img/floor.png'),
+          title: 'Układanie kafelek'
         },
         {
-          src: require('@/assets/img/desk-floor.png')
+          src: require('@/assets/img/desk-floor.png'),
+          title: 'Układanie podłóg'
         }
       ]
     })
@@ -120,6 +124,10 @@ h1 {
   }
 }
 
+ .slide-desc {
+    transform: translate(20%, 85%);
+  }
+
 .slider-footer {
   display: flex;
   flex-direction: column;
@@ -143,10 +151,108 @@ h1 {
 
 .child {
   flex: 1 1 25%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .img-child {
+  display: block;
   width: 100%;
-  max-height: 300px;
+  height: 300px;
+  display: flex;
+  -webkit-filter: brightness(20%);
+  filter:brightness(30%);
+}
+
+.service-btn {
+  display: block;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $yellow-primary;
+  font-weight: bold;
+  border: 2px solid $yellow-primary;
+  padding: 14px 28px;
+  transform: translateX(100px);
+}
+
+@media screen and (max-width: 1710px) {
+  .slide-desc {
+    transform: translate(20%, 60%);
+  }
+  .slider-footer {
+    transform: translateY(-8%);
+  }
+}
+
+@media screen and (max-width: 1410px) {
+  .slide-desc {
+    transform: translate(20%, 40%);
+  }
+  .slider-footer {
+    transform: translateY(-12%);
+  }
+}
+
+  @media screen and (max-width: 1235px) {
+  .slide-desc {
+    transform: translate(20%, 40%);
+  }
+  .slider-footer {
+    transform: translateY(-14%);
+  }
+  h1 {
+    font-size: 35px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    .name {
+      font-size: 25px;
+    }
+  }
+  .slider-footer {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-footer {
+    transform: translateY(-14%);
+  }
+  h1 {
+    font-size: 35px;
+    margin-left: 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    transform: translateX(10%);
+    .name {
+      transform: translateX(12%);
+      margin: auto;
+      font-size: 25px;
+    }
+  }
+  .child {
+  flex: 1 1 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+  .slider-footer {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+  }
+
+  .slider-btn {
+    font-size: 13px;
+    margin: 2px;
+    &.service {
+      width: 150px;
+    }
+    &.phone {
+      width: 270px;
+    }
+  }
 }
 </style>

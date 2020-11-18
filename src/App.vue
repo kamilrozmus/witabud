@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Header from './components/Header';
+import Header from './components/common/Header';
 
 export default {
   name: 'App',
@@ -26,12 +26,7 @@ export default {
 .v-application {
   font-family: 'Spartan', sans-serif;
   letter-spacing: 0px;
-}
-
-@media screen and (max-width: 768px) {
-  .v-application {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
 }
 
 button:focus {
