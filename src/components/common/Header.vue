@@ -8,8 +8,8 @@
       />
     </div>
     <ul class="links" :class="{ 'nav-active': isActive}">
-      <li><a href="#">Strona główna</a></li>
-      <li><a href="#">O firmie</a></li>
+      <li><a href="/">Strona główna</a></li>
+      <li><a href="/article">O firmie</a></li>
       <li><a href="#">Usługi</a></li>
       <li><a href="#">Realizacje</a></li>
       <li><a href="#">Kontakt</a></li>

@@ -43,13 +43,13 @@
         </div>
       </div>
       <div class="map">
-        <!-- <img src="@/assets/img/map.png" /> -->
+        <img src="@/assets/img/map.png" />
       </div>
     </div>
 
-    <!-- <div class="copyright">
-      {{ "2020 © Made with passion by Kamil Rozmus" }}
-    </div> -->
+    <div class="copyright">
+      <span>2020 © Made with passion by Kamil Rozmus</span>
+    </div>
   </footer>
 </template>
 <style lang="scss" scoped>
@@ -57,7 +57,7 @@
 
 footer {
   width: 100%;
-  height: auto;
+  height: 500px;
   margin: 0;
   padding: 0;
   color: white;
@@ -108,22 +108,37 @@ footer {
 
 .info {
   background-color: $black-primary !important;
-  width: 65vw !important;
+  width: 65vw;
   padding-left: 20%;
   padding-right: 30px;
+  padding-bottom: 20px;
   margin-top: 50px;
+  height: 100%;
 
 }
 
 .map {
-  max-width: calc(100vw - 65vw);
-  -webkit-filter: brightness(20%);
-  filter:brightness(30%);
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  margin-top: 69px;
+}
+
+.map img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .copyright {
-  display: flex;
-  justify-content: center;
+  background: $dark-bg;
+  height: 50px;
+  span {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
 }
 
 @media screen and (max-width: 1024px) {
