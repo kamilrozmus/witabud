@@ -176,6 +176,11 @@ h1 {
   border: 2px solid $yellow-primary;
   padding: 14px 28px;
   transform: translateX(100px);
+  &:hover {
+    color: $black-primary;
+    background: $yellow-primary;
+    opacity: 100%;
+  }
 }
 
 @media screen and (max-width: 1710px) {

@@ -37,18 +37,14 @@
         </div>
       </div>
     </div>
-    <div v-for="(item, i) in items" :key="i" class="item-done">
-      <img :src="item.src">
-      <div class="text" >
-        <div class="title ">{{ item.title }}</div>
-        <div class="desc">{{ item.desc }}</div>
-      </div>
-    </div>
-
+    <realizations-item :items="items" />
   </div>
 </template>
 <script>
+import RealizationsItem from './common/RealizationsItem.vue'
+
 export default {
+  components: { RealizationsItem },
   data() {
     return {
       items: [

@@ -26,7 +26,7 @@
         <input placeholder="Email lub telefon"/>
         <input placeholder="Temat"/>
         <input placeholder="Treść"/>
-        <button>Wyślij</button>
+        <button class="yellow-btn">Wyślij</button>
       </div>
       <div class="side-article">
         <span>Donec nonummy</span>
@@ -39,11 +39,17 @@
       </div>
     </div>
   </div>
-  <div class="realizations">
+  <div>
     <span>Realizacje</span>
-    <realizations-item :items="items" />
+    <realizations-item :items="items" class="realizations"/>
   </div>
-  <button>Zobacz więcej</button>
+  <button class="yellow-btn">Zobacz więcej</button>
+  </div>
+  <div class="buttons">
+    <button class="service-btn">Malowanie</button>
+    <button class="service-btn">Tapetowanie</button>
+    <button class="service-btn">Układanie paneli</button>
+
   </div>
 </div>
 </template>
@@ -115,6 +121,12 @@ export default {
   }
 }
 
+.realizations {
+    flex: 1 1 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .main {
   margin: 0 200px;
 }
@@ -150,11 +162,28 @@ input {
   text-indent: 20px;
 }
 
-button {
+.yellow-btn {
   background: $yellow-primary;
   width: 100%;
   font-weight: bold;
   border: 2px solid $yellow-primary;
   padding: 14px 28px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  transform: translateX(-100px);
+}
+
+.service-btn {
+  display: block;
+  margin: 0 15px;
+  color: $black-primary;
+  font-weight: bold;
+  width: 150px;
+  border: 2px solid $black-primary;
+  padding: 14px 14px;
+  transform: translateX(100px);
 }
 </style>

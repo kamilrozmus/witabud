@@ -138,7 +138,6 @@ footer {
     justify-content: center;
     align-content: center;
   }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -166,7 +165,5 @@ footer {
   .links {
     font-size: 9px;
   }
-
 }
-
 </style>

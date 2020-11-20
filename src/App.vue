@@ -26,11 +26,12 @@ export default {
 .v-application {
   font-family: 'Spartan', sans-serif;
   letter-spacing: 0px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 button:focus {
   outline: none;
   box-shadow: none;
 }
+
 </style>
