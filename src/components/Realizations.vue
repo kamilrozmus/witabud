@@ -69,7 +69,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
 
 .content {
   display: flex;
@@ -94,32 +93,6 @@ export default {
   button {
     color: $yellow-primary;
     text-transform: uppercase;
-  }
-}
-
-.item-done {
-  padding: 25px;
-  width: 350px;
-
-  .text {
-    border: 1px solid grey;
-    border-top: transparent;
-    padding: 20px;
-  }
-
-  img {
-    width: 300px;
-  }
-
-  .title {
-    color: $black-primary;
-    font-weight: bold;
-    margin-bottom: 5%;
-
-    .desc {
-      color: $description;
-      border: 1px solid grey;
-    }
   }
 }
 

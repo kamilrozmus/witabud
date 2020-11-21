@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
+
 * {
   margin-top: 0px;
   padding: 0px;

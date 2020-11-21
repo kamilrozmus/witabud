@@ -20,7 +20,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
 
 .content {
   display: flex;
@@ -62,24 +61,27 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
+
   .header {
-  width: 90vw;
-  .header-title {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    p {
-      margin-left: 20px;
-      margin-top: 1%;
+    width: 90vw;
+
+    .header-title {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      p {
+        margin-left: 20px;
+        margin-top: 1%;
+      }
     }
 
-  }
-  .buttons {
-    display: flex;
-    justify-content: space-between;
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
-}
   .item-done {
     margin: 0 20px;
     flex: 1 1 100%;
@@ -111,56 +113,60 @@ export default {
   }
 }
 
-
 @media screen and (max-width: 480px) {
 
-.content {
-      margin: 0 40px;
-      flex: 1 1 100%;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .header {
-      text-align: justify;
+  .content {
+    margin: 0 40px;
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-right: 20px;
+
+    .header-title {
       display: flex;
       flex-direction: column;
-      margin-top: 30px;
-      margin-right: 20px;
-      .header-title {
-        display: flex;
-        flex-direction: column;
-        h1 {
-          margin-left: 5%;
-        }
-      }
-      .buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 350px;
-        margin-bottom: 30px;
-      }
-      p {
-        width: 350px;
+      h1 {
+        margin-left: 5%;
       }
     }
-    .item-done {
-      width: 350px;
-      margin: 0 40px;
-      flex: 1 1 100%;
-      display: flex;
-      flex-wrap: wrap;
 
-      .text {
-        border: 1px solid grey;
-        border-top: transparent;
-        padding: 20px;
-      }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+      margin-bottom: 30px;
     }
-    img {
-      width: 300px;
-      height: 300px;
-      transform: translateY(6px);
+
+    p {
+      width: 350px;
     }
   }
 
+  .item-done {
+    width: 350px;
+    margin: 0 40px;
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .text {
+      border: 1px solid grey;
+      border-top: transparent;
+      padding: 20px;
+    }
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    transform: translateY(6px);
+  }
+}
 </style>

@@ -53,7 +53,6 @@
   </footer>
 </template>
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
 
 footer {
   width: 100%;

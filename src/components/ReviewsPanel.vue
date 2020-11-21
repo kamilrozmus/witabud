@@ -41,7 +41,6 @@
   </div>
 </template>
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
 
 .reviews-panel {
   padding-top: 0;

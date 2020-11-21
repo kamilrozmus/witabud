@@ -70,7 +70,6 @@
   }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
 
 h1 {
   font-size: 55px;

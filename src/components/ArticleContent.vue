@@ -110,7 +110,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/styles.scss';
 
 .title-bar {
   background: $yellow-primary;
@@ -224,5 +223,11 @@ input {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .content {
+    width: 100%;
+    text-align: justify;
+  }
 }
+
 </style>
