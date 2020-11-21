@@ -48,6 +48,7 @@ nav {
   align-items: center;
   min-height: 8vh;
   background-color: transparent;
+  margin-left: 3%;
 }
 
 .links {

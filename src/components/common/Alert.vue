@@ -28,7 +28,7 @@ export default {
   position: absolute;
   display: flex;
   justify-content: space-around;
-  padding: 20px 0 15px;
+  padding: 15px 0 15px;
   background-color: $yellow-primary;
   width: 100vw;
   height: 70px;
@@ -49,6 +49,7 @@ export default {
     font-size: 21px;
     color: $black-primary;
     font-weight: bold;
+    margin-top: 5px;
   }
 }
 @media screen and (max-width: 1024px) {

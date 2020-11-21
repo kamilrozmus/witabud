@@ -36,7 +36,6 @@
     <div class="services">
       <div v-for="(item, i) in servicesImg" :key="i" class="child">
         <img :src="item.src" class="img-child">
-        <button class="service-btn">{{ item.title }}</button>
       </div>
     </div>
   </div>
@@ -56,19 +55,15 @@
       servicesImg: [
         {
           src: require('@/assets/img/painting.png'),
-          title: 'Malowanie'
         },
         {
           src: require('@/assets/img/cutting.png'),
-          title: 'Tapetowanie'
         },
         {
           src: require('@/assets/img/floor.png'),
-          title: 'Układanie kafelek'
         },
         {
           src: require('@/assets/img/desk-floor.png'),
-          title: 'Układanie podłóg'
         }
       ]
     })
@@ -165,23 +160,23 @@ h1 {
   filter:brightness(30%);
 }
 
-.service-btn {
-  display: block;
-  position: absolute;
-  margin-top: 130px;
-  margin-left: auto;
-  margin-right: auto;
-  color: $yellow-primary;
-  font-weight: bold;
-  border: 2px solid $yellow-primary;
-  padding: 14px 28px;
-  transform: translateX(100px);
-  &:hover {
-    color: $black-primary;
-    background: $yellow-primary;
-    opacity: 100%;
-  }
-}
+// .service-btn {
+//   display: block;
+//   position: absolute;
+//   margin-top: 130px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   color: $yellow-primary;
+//   font-weight: bold;
+//   border: 2px solid $yellow-primary;
+//   padding: 14px 28px;
+//   transform: translateX(100px);
+//   &:hover {
+//     color: $black-primary;
+//     background: $yellow-primary;
+//     opacity: 100%;
+//   }
+// }
 
 @media screen and (max-width: 1710px) {
   .slide-desc {

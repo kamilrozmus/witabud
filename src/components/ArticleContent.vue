@@ -4,54 +4,56 @@
     <span>Układanie kafelek</span>
   </div>
   <div class="main">
-  <div class="d-flex">
-    <div style="margin-right: 50px;">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
-      </p>
-      <img src="@/assets/img/bathroom.png" style="width: 100%; height: auto;">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
-      </p>
-    </div>
-
-    <div style="">
-      <div class="form">
-        <span>Wyślij wiadomość</span>
-        <input placeholder="Imie i nazwisko"/>
-        <input placeholder="Email lub telefon"/>
-        <input placeholder="Temat"/>
-        <input placeholder="Treść"/>
-        <button class="yellow-btn">Wyślij</button>
+    <div class="main-content d-flex">
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
+        </p>
+        <img src="@/assets/img/bathroom.png" style="width: 100%; height: auto;">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sunt iste libero praesentium blanditiis repellendus doloremque laudantium, accusantium voluptates? Nihil culpa hic dolor et recusandae! Dolorem accusamus adipisci repellendus?
+        </p>
       </div>
-      <div class="side-article">
-        <span>Donec nonummy</span>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia quasi odio minus quam laboriosam ut repudiandae impedit autem pariatur reprehenderit facilis sit aspernatur in possimus, blanditiis commodi tempora? Aperiam.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia quasi odio minus quam laboriosam ut repudiandae impedit autem pariatur reprehenderit facilis sit aspernatur in possimus, blanditiis commodi tempora? Aperiam.
-        </p>
+
+      <div style="">
+        <div class="form">
+          <span>Wyślij wiadomość</span>
+          <input placeholder="Imie i nazwisko"/>
+          <input placeholder="Email lub telefon"/>
+          <input placeholder="Temat"/>
+          <input placeholder="Treść"/>
+          <button class="yellow-btn">Wyślij</button>
+        </div>
+        <div class="side-article">
+          <span>Donec nonummy</span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia quasi odio minus quam laboriosam ut repudiandae impedit autem pariatur reprehenderit facilis sit aspernatur in possimus, blanditiis commodi tempora? Aperiam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia quasi odio minus quam laboriosam ut repudiandae impedit autem pariatur reprehenderit facilis sit aspernatur in possimus, blanditiis commodi tempora? Aperiam.
+          </p>
+        </div>
       </div>
     </div>
   </div>
   <div>
-    <span>Realizacje</span>
-    <realizations-item :items="items" class="realizations"/>
+    <div>
+      <realizations-item :items="items" class="realizations"/>
+    </div>
+    <button class="yellow-btn">Zobacz więcej</button>
+    </div>
+    <div class="buttons-bg">
+      <div class="buttons">
+        <button class="service-btn">Malowanie</button>
+        <button class="service-btn">Tapetowanie</button>
+        <button class="service-btn">Układanie paneli</button>
+      </div>
+    </div>
   </div>
-  <button class="yellow-btn">Zobacz więcej</button>
-  </div>
-  <div class="buttons">
-    <button class="service-btn">Malowanie</button>
-    <button class="service-btn">Tapetowanie</button>
-    <button class="service-btn">Układanie paneli</button>
-
-  </div>
-</div>
 </template>
 <script>
 import RealizationsItem from './common/RealizationsItem.vue'
@@ -121,19 +123,28 @@ export default {
   }
 }
 
+.content {
+  margin-right: 50px;
+  min-width: 400px;
+}
+
 .realizations {
-    flex: 1 1 50%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15%;
 }
 
 .main {
-  margin: 0 200px;
+  padding: 0 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .form {
   background: black;
   padding: 40px;
+  min-width: 300px;
   span {
     color: $white-primary;
     text-transform: uppercase;
@@ -168,12 +179,17 @@ input {
   font-weight: bold;
   border: 2px solid $yellow-primary;
   padding: 14px 28px;
+  margin: 20px 0 45px 0;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  transform: translateX(-100px);
+.buttons-bg {
+  background: rgb(243, 240, 240);
+  padding: 40px 0;
+  .buttons {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-100px);
+  }
 }
 
 .service-btn {
@@ -181,9 +197,32 @@ input {
   margin: 0 15px;
   color: $black-primary;
   font-weight: bold;
-  width: 150px;
+  width: 200px;
   border: 2px solid $black-primary;
   padding: 14px 14px;
   transform: translateX(100px);
+  &:hover {
+    background: $dark-bg;
+    color: $white-primary;
+  }
+}
+
+
+@media screen and (max-width: 1720px) {
+  .realizations {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .realizations {
+    width: 100%;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 </style>

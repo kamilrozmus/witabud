@@ -81,6 +81,7 @@ export default {
 .header {
   width: 20%;
   margin-right: 20px;
+  transform: translate(150px, 60px);
   h1 {
     font-size: 22px;
     text-transform: uppercase;
@@ -124,137 +125,30 @@ export default {
 
 @media screen and (max-width: 1235px) {
 
-.content {
-  margin: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 90vw;
-}
-
-.header {
-  width: 90vw;
-  .header-title {
-    display: flex;
-    justify-content: space-between;
-    p {
-      margin-left: 20px;
-      margin-top: 1%;
-    }
-
-  }
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-
-}
-
-}
-@media screen and (max-width: 768px) {
-
   .content {
-    margin: 0 40px;
-    flex: 1 1 100%;
+    margin: 30px;
     display: flex;
     flex-wrap: wrap;
+    width: 90vw;
   }
+
   .header {
-  width: 90vw;
-  .header-title {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    p {
-      margin-left: 20px;
-      margin-top: 1%;
-    }
-
-  }
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-
-}
-  .item-done {
-    margin: 0 20px;
-    flex: 1 1 100%;
-    display: flex;
-    padding: 25px;
-    margin: 0 10px 0 10px;
-    width: 300px;
-
-    .text {
-      border: 1px solid grey;
-    border-left: transparent;
-    padding: 20px;
-    }
-
-    img {
-      width: 300px;
-    }
-
-    .title {
-      color: $black-primary;
-      font-weight: bold;
-      margin-bottom: 5%;
-
-      .desc {
-        color: $description;
-        border: 1px solid grey;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 480px) {
-
-.content {
-      margin: 0 40px;
-      flex: 1 1 100%;
+    width: 90vw;
+    transform: translateX(10px);
+    .header-title {
       display: flex;
-      flex-wrap: wrap;
-    }
-    .header {
-      text-align: justify;
-      display: flex;
-      flex-direction: column;
-      margin-top: 30px;
-      margin-right: 20px;
-      .header-title {
-        display: flex;
-        flex-direction: column;
-        h1 {
-          margin-left: 5%;
-        }
-      }
-      .buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 350px;
-        margin-bottom: 30px;
-      }
+      justify-content: space-between;
       p {
-        width: 350px;
+        margin-left: 20px;
+        margin-top: 1%;
       }
-    }
-    .item-done {
-      width: 350px;
-      margin: 0 40px;
-      flex: 1 1 100%;
-      display: flex;
-      flex-wrap: wrap;
 
-      .text {
-        border: 1px solid grey;
-        border-top: transparent;
-        padding: 20px;
-      }
     }
-    img {
-      width: 300px;
-      transform: translateY(6px);
+    .buttons {
+      display: flex;
+      justify-content: space-between;
     }
+
   }
+}
 </style>
