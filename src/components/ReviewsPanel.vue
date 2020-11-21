@@ -9,8 +9,10 @@
           >
         </v-avatar>
         <div class="ml-5" style="max-width: 250px;">
-          <div>Joanna Kowalska</div>
-          <span class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+          <div class="name">Joanna Kowalska</div>
+          <span class="review-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est
+          </span>
         </div>
       </div>
       <div class="child my-5">
@@ -21,8 +23,10 @@
           >
         </v-avatar>
         <div class="ml-5" style="max-width: 250px;">
-          <div class="name">Joanna Kowalska</div>
-          <span class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+          <div class="name">Wojciech Tomaszkiewicz</div>
+          <span class="review-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est
+          </span>
         </div>
       </div>
       <div class="child my-5">
@@ -33,13 +37,21 @@
           >
         </v-avatar>
         <div class="ml-5" style="max-width: 250px;">
-          <div>Joanna Kowalska</div>
-          <span class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est</span>
+          <div class="name">Karol Dobrowolski</div>
+          <span class="review-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio illo voluptates repudiandae distinctio est
+          </span>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+
+export default {
+  name: 'ReviewsPanel'
+}
+</script>
 <style lang="scss" scoped>
 
 .reviews-panel {
@@ -54,21 +66,23 @@
 
     .child {
       display: flex;
-      border: 0.1px solid #393939;
+      border: 0.1px solid $contrast-black;
       padding: 14px 28px;
       margin: 0 10px;
+
       .v-avatar img {
         border: 2px solid $yellow-primary;
       }
-      .name {
-        //color
-      }
-
     }
   }
+
+  .name {
+    color: $grey-name;
+  }
+
   .review-desc {
     font-weight: 300;
-    color: #797979;
+    color: $grey-desc;
   }
 
   @media screen and (max-width: 1024px) {
@@ -80,6 +94,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .v-avatar {
           margin-bottom: 10%;
         }
@@ -89,6 +104,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .childs {
     margin: 0 20px;
     flex: 1 1 100%;
@@ -106,6 +122,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .childs {
     margin: 0 40px;
     flex: 1 1 100%;
@@ -114,6 +131,7 @@
 
     .child {
       text-align: center;
+
       .v-avatar {
         margin-bottom: 10%;
       }

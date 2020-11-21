@@ -41,33 +41,35 @@
   </div>
 </template>
 <script>
-  export default {
-    data: () => ({
-      model: 0,
-      slides: [
-        {
-          src: require('@/assets/img/slide1.png')
-        },
-        {
-          src: require('@/assets/img/slide2.png')
-        }
-      ],
-      servicesImg: [
-        {
-          src: require('@/assets/img/painting.png'),
-        },
-        {
-          src: require('@/assets/img/cutting.png'),
-        },
-        {
-          src: require('@/assets/img/floor.png'),
-        },
-        {
-          src: require('@/assets/img/desk-floor.png'),
-        }
-      ]
-    })
-  }
+
+export default {
+  name: 'CarouselComponent',
+  data: () => ({
+    model: 0,
+    slides: [
+      {
+        src: require('@/assets/img/slide1.png')
+      },
+      {
+        src: require('@/assets/img/slide2.png')
+      }
+    ],
+    servicesImg: [
+      {
+        src: require('@/assets/img/painting.png'),
+      },
+      {
+        src: require('@/assets/img/cutting.png'),
+      },
+      {
+        src: require('@/assets/img/floor.png'),
+      },
+      {
+        src: require('@/assets/img/desk-floor.png'),
+      }
+    ]
+  })
+}
 </script>
 <style lang="scss" scoped>
 
@@ -118,10 +120,9 @@ h1 {
   }
 }
 
- .slide-desc {
-    transform: translate(20%, 85%);
-  }
-
+.slide-desc {
+  transform: translate(20%, 85%);
+}
 
 .slider-footer {
   display: flex;
@@ -130,6 +131,7 @@ h1 {
   align-items: center;
   height: 100%;
   transform: translateY(5%);
+
   .title {
     font-size: 18px !important;
     font-weight: 600;
@@ -178,18 +180,22 @@ h1 {
 // }
 
 @media screen and (max-width: 1710px) {
+
   .slide-desc {
     transform: translate(20%, 60%);
   }
+
   .slider-footer {
     transform: translateY(-8%);
   }
 }
 
 @media screen and (max-width: 1410px) {
+
   .slide-desc {
     transform: translate(20%, 40%);
   }
+
   .slider-footer {
     transform: translateY(-12%);
     margin-bottom: 100px;
@@ -197,12 +203,15 @@ h1 {
 }
 
   @media screen and (max-width: 1235px) {
+
   .slide-desc {
     transform: translate(20%, 40%);
   }
+
   .slider-footer {
     transform: translateY(-14%);
   }
+
   h1 {
     font-size: 35px;
     margin-left: 10px;
@@ -211,17 +220,20 @@ h1 {
       font-size: 25px;
     }
   }
+
   .slider-footer {
     display: flex;
     justify-content: center;
     align-content: flex-end;
     margin-bottom: 100px;
   }
+
    .child {
     flex: 1 1 50%;
     display: flex;
     flex-wrap: wrap;
   }
+
   .slider-footer {
     display: flex;
     justify-content: center;
@@ -242,22 +254,24 @@ h1 {
 }
 
 @media screen and (max-width: 1024px) {
+
   .slider-footer {
     transform: translateY(-14%);
     margin-bottom: 100px;
   }
+
   h1 {
-    font-size: 35px;
-    margin-left: 10px;
     text-align: justify;
     text-transform: uppercase;
     transform: translateX(10%);
+
     .name {
       transform: translateX(12%);
       margin: auto;
       font-size: 25px;
     }
   }
+
   .slider-btn {
     transform: translateX(40%);
     font-size: 13px;
@@ -278,12 +292,14 @@ h1 {
     margin-bottom: 100px;
 
   }
+
   h1 {
     font-size: 28px;
     margin-left: 10px;
     text-align: justify;
     text-transform: uppercase;
     transform: translate(5%, -25%);
+
     .name {
       transform: translate(11%, -40%);
       margin: auto;
@@ -305,12 +321,14 @@ h1 {
 }
 
 @media screen and (max-width: 580px) {
+
 h1 {
     font-size: 28px;
     margin-left: 10px;
     text-align: justify;
     text-transform: uppercase;
     transform: translate(1%, -25%);
+
     .name {
       transform: translate(15%, -40%);
       margin: auto;
@@ -331,17 +349,21 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
+
   .slider-footer {
     transform: translateY(-25%);
+
     .title {
       font-size: 14px !important;
       font-weight: 600;
       margin-top: 80px;
     }
+
     button .v-icon {
       margin-bottom: 35px;
     }
   }
+
   h1 {
     padding-top: 100px;
     font-size: 30px;
@@ -377,6 +399,7 @@ h1 {
 }
 
 @media screen and (max-width: 440px) {
+
   h1 {
     padding-top: 100px;
     font-size: 28px;
@@ -384,12 +407,14 @@ h1 {
     text-align: justify;
     text-transform: uppercase;
     transform: translate(-14%, -45%);
+
     .name {
       transform: translate(22%, -40%);
       margin: auto;
       font-size: 22px;
     }
   }
+
   .slider-btn {
     transform: translate(-8%, -150%);
     font-size: 13px;

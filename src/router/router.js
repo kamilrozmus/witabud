@@ -4,7 +4,6 @@ import Router from 'vue-router'
 const Home = () => import('@/pages/Home')
 const Article = () => import('@/pages/Article')
 
-
 Vue.use(Router)
 
 export default new Router({

@@ -26,9 +26,9 @@
               Obserwuj
             </div>
             <div class="items">
-              <img src="@/assets/img/face-logo.png" class="mx-2" style="width: 40px;"/>
-              <img src="@/assets/img/gplus-logo.png" style="width: 40px;"/>
-              <img src="@/assets/img/insta-logo.png" class="mx-2" style="width: 40px;"/>
+              <img src="@/assets/img/face-logo.png" class="mx-2" style="width: 40px;" />
+              <img src="@/assets/img/gplus-logo.png" style="width: 40px;" />
+              <img src="@/assets/img/insta-logo.png" class="mx-2" style="width: 40px;" />
             </div>
           </div>
           <div class="menu">
@@ -52,6 +52,11 @@
     </div>
   </footer>
 </template>
+<script>
+export default {
+  name: 'FooterComponent'
+}
+</script>
 <style lang="scss" scoped>
 
 footer {
@@ -79,9 +84,11 @@ footer {
   justify-content: space-between;
   padding: 0 0 30px 0;
   font-size: 12px;
+
   li {
     list-style: none;
   }
+
   a {
     text-decoration: none;
     color: $white-primary;
@@ -93,6 +100,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 35px 0;
+
   .mail {
     color: $yellow-primary;
   }
@@ -132,6 +140,7 @@ footer {
 .copyright {
   background: $dark-bg;
   height: 50px;
+
   span {
     display: flex;
     justify-content: center;
@@ -140,6 +149,7 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+
   footer {
     margin-top: 100px;
   }
@@ -153,6 +163,7 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+
   footer {
     font-size: 9px;
   }

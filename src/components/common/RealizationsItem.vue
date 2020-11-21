@@ -1,6 +1,10 @@
 <template>
   <div class="content">
-   <div v-for="(item, i) in items" :key="i" class="item-done">
+    <div
+      v-for="(item, index) in items"
+      :key="index"
+      class="item-done"
+    >
       <img :src="item.src">
       <div class="text">
         <div class="title ">{{ item.title }}</div>

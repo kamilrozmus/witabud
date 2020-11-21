@@ -2,25 +2,19 @@
   <v-app>
     <Header />
     <v-main class="mt-2">
-     <router-view></router-view>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Header from './components/common/Header';
+
+import Header from './components/common/Header'
 
 export default {
   name: 'App',
-
-  components: {
-    Header
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  components: { Header }
+}
 </script>
 <style lang="scss">
 
@@ -34,5 +28,4 @@ button:focus {
   outline: none;
   box-shadow: none;
 }
-
 </style>

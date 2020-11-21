@@ -15,18 +15,14 @@
       </div>
       <div>
         <div class="buttons">
-        <div>
-          <button>
-            <v-icon
-              large
-            >
-              mdi-chevron-left
-            </v-icon>
-          </button>
-          <button>
-              <v-icon
-                large
-              >
+          <div>
+            <button>
+              <v-icon large>
+                mdi-chevron-left
+              </v-icon>
+            </button>
+            <button>
+              <v-icon large>
                 mdi-chevron-right
               </v-icon>
             </button>
@@ -41,9 +37,11 @@
   </div>
 </template>
 <script>
+
 import RealizationsItem from './common/RealizationsItem.vue'
 
 export default {
+  name: 'Realizations',
   components: { RealizationsItem },
   data() {
     return {

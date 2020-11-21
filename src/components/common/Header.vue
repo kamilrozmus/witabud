@@ -7,7 +7,10 @@
         transition="scale-transition"
       />
     </div>
-    <ul class="links" :class="{ 'nav-active': isActive}">
+    <ul
+      class="links"
+      :class="{ 'nav-active': isActive}"
+    >
       <li><a href="/">Strona główna</a></li>
       <li><a href="/article">O firmie</a></li>
       <li><a href="#">Usługi</a></li>
@@ -24,8 +27,8 @@
   </nav>
 </template>
 <script>
-
 export default {
+  name: 'Header',
   data() {
     return {
       isActive: false
@@ -33,7 +36,6 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
 
 * {
@@ -91,6 +93,7 @@ nav {
 }
 
 @media screen and (max-width: 1024px) {
+
   .links {
     display: flex;
     margin: 0px;
@@ -111,6 +114,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+
   .links {
     display: flex;
     flex-direction: column;
@@ -151,6 +155,7 @@ nav {
 }
 
 @media screen and (max-width: 480px) {
+
   nav {
     display: flex;
     justify-content: space-between;

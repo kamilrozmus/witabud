@@ -2,8 +2,9 @@
   "name": "widabud-rsw",
   "version": "0.1.0",
   "private": true,
+  "author": "Kamil Rozmus",
   "scripts": {
-    "serve": "vue-cli-service serve --host 0.0.0.0 --allowed-hosts 192.168.0.104",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

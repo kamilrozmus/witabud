@@ -56,11 +56,12 @@
   </div>
 </template>
 <script>
+
 import RealizationsItem from './common/RealizationsItem.vue'
+
 export default {
-  components: {
-    RealizationsItem
-  },
+  name: 'ArticleContent',
+  components: { RealizationsItem },
   data() {
     return {
       items: [
@@ -116,6 +117,7 @@ export default {
   height: 70px;
   width: 100%;
   margin-bottom: 45px;
+
   span {
     margin-left: 200px;
     text-transform: uppercase;
@@ -141,9 +143,10 @@ export default {
 }
 
 .form {
-  background: black;
+  background: $black-primary;
   padding: 40px;
   min-width: 300px;
+
   span {
     color: $white-primary;
     text-transform: uppercase;
@@ -154,6 +157,7 @@ export default {
   background: grey;
   padding: 40px;
   margin-top: 35px;
+
   span {
     color: $black-primary;
     text-transform: uppercase;
@@ -184,6 +188,7 @@ input {
 .buttons-bg {
   background: rgb(243, 240, 240);
   padding: 40px 0;
+
   .buttons {
     display: flex;
     justify-content: center;
@@ -208,12 +213,14 @@ input {
 
 
 @media screen and (max-width: 1720px) {
+
   .realizations {
     padding: 0;
   }
 }
 
 @media screen and (max-width: 780px) {
+
   .realizations {
     width: 100%;
   }
@@ -229,5 +236,4 @@ input {
     text-align: justify;
   }
 }
-
 </style>
