@@ -2,7 +2,7 @@
   <footer>
     <div class="content">
       <div class="info">
-        <div>
+        <div class="info-content">
           <div class="header">
             <v-img src="@/assets/img/logo-white.png" style="width: 200px;" />
           </div>
@@ -45,10 +45,6 @@
       <div class="map">
         <img src="@/assets/img/map.png" />
       </div>
-    </div>
-
-    <div class="copyright">
-      <span>2020 © Made with passion by Kamil Rozmus</span>
     </div>
   </footer>
 </template>
@@ -115,26 +111,18 @@ footer {
 
 .info {
   background-color: $black-primary !important;
+  display: flex;
+  justify-content: center;
   width: 65vw;
-  padding-left: 20%;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  margin-top: 50px;
+  padding-left: 200px;
+  padding-right: 150px;
+  padding-top: 85px;
+  padding-bottom: 130px;
   height: 100%;
-
-}
-
-.map {
-  overflow: hidden;
-  position: relative;
-  height: auto;
-  margin-top: 69px;
-}
-
-.map img {
-  max-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
+  .info-content {
+    min-width: 550px;
+    padding-right: 50px;
+  }
 }
 
 .copyright {
@@ -150,26 +138,42 @@ footer {
 
 @media screen and (max-width: 1024px) {
 
+  .info {
+    padding-bottom: 120px;
+  }
+
   footer {
     margin-top: 100px;
   }
+
 }
 
 @media screen and (max-width: 768px) {
 
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .info {
-    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 480px) {
 
+
   footer {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .info {
     width: 100vw !important;
+    .info-content {
+      min-width: 370px;
+    }
   }
 
   .links {

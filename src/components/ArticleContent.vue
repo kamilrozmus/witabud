@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="title-bar">
-    <span>Układanie kafelek</span>
+    <span class="title-header">Układanie kafelek</span>
   </div>
   <div class="main">
     <div class="main-content d-flex">
@@ -44,7 +44,7 @@
     <div>
       <realizations-item :items="items" class="realizations"/>
     </div>
-    <button class="yellow-btn">Zobacz więcej</button>
+    <button class="yellow-btn see-more">Zobacz więcej</button>
     </div>
     <div class="buttons-bg">
       <div class="buttons">
@@ -118,9 +118,16 @@ export default {
   width: 100%;
   margin-bottom: 45px;
 
-  span {
-    margin-left: 200px;
+  .title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 93%;
+    max-width: 1500px;
+    margin: 0 auto;
     text-transform: uppercase;
+    height: 100%;
+    font-size: 25px;
   }
 }
 
@@ -212,10 +219,10 @@ input {
 }
 
 
-@media screen and (max-width: 1720px) {
+@media screen and (max-width: 1784px) {
 
   .realizations {
-    padding: 0;
+    padding: 0 5%;
   }
 }
 
@@ -232,8 +239,16 @@ input {
   }
 
   .content {
-    width: 100%;
+    width: 90vw;
+    margin: 0 auto;
     text-align: justify;
+    justify-content: center;
+  }
+
+  .service-btn {
+    width: 130px;
+    font-size: 12px;
   }
 }
+
 </style>

@@ -34,6 +34,7 @@ export default {
 .alert {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 15px 0 15px;
   background-color: $yellow-primary;
@@ -43,6 +44,7 @@ export default {
   .list {
     display: flex;
     justify-content: space-between;
+
     li {
       list-style: none;
     }
@@ -50,20 +52,20 @@ export default {
 
   .message {
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 29px;
   }
 
   .phone {
     display: flex;
     justify-content: space-between;
-    font-size: 21px;
+    font-size: 23px;
     color: $black-primary;
     font-weight: bold;
     margin-top: 5px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 
   .alert {
     display: flex;
@@ -72,6 +74,19 @@ export default {
   }
 }
 
+@media screen and (max-width: 768px) {
+
+  .alert {
+    height: 100px;
+    .message {
+      font-size: 22px;
+    }
+
+    .phone {
+      font-size: 18px;
+    }
+  }
+}
 
 @media screen and (max-width: 480px) {
 

@@ -91,7 +91,6 @@ export default {
     flex: 1 1 100%;
     display: flex;
     padding: 25px;
-    margin: 0 100px 0 10px;
 
     .text {
       border: 1px solid grey;
@@ -100,7 +99,7 @@ export default {
     }
 
     img {
-      width: 300px;
+      width: 200px;
       height: auto;
     }
 
@@ -159,7 +158,7 @@ export default {
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
-
+    margin-right: 75px;
     .text {
       border: 1px solid grey;
       border-top: transparent;
@@ -168,8 +167,8 @@ export default {
   }
 
   img {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     transform: translateY(6px);
   }
 }

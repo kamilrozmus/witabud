@@ -12,8 +12,8 @@
       :class="{ 'nav-active': isActive}"
     >
       <li><a href="/">Strona główna</a></li>
-      <li><a href="/article">O firmie</a></li>
-      <li><a href="#">Usługi</a></li>
+      <li><a href="#">O firmie</a></li>
+      <li><a href="/article">Usługi</a></li>
       <li><a href="#">Realizacje</a></li>
       <li><a href="#">Kontakt</a></li>
     </ul>
@@ -51,6 +51,7 @@ nav {
   min-height: 8vh;
   background-color: transparent;
   margin-left: 3%;
+
 }
 
 .links {
@@ -114,6 +115,12 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 35px;
+  }
 
   .links {
     display: flex;

@@ -7,7 +7,7 @@
         prev-icon="mdi-arrow-right"
         next-icon="mdi-arrow-right"
       >
-        <v-sheet class="sheet">
+        <v-sheet>
           <v-img :src="item.src" gradient="to top right, rgba(0,0,0,.33), rgba(0,0,0,.7)" style="width: 100%;">
             <div class="slide-desc">
               <h1>
@@ -161,24 +161,6 @@ h1 {
   filter:brightness(30%);
 }
 
-// .service-btn {
-//   display: block;
-//   position: absolute;
-//   margin-top: 130px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   color: $yellow-primary;
-//   font-weight: bold;
-//   border: 2px solid $yellow-primary;
-//   padding: 14px 28px;
-//   transform: translateX(100px);
-//   &:hover {
-//     color: $black-primary;
-//     background: $yellow-primary;
-//     opacity: 100%;
-//   }
-// }
-
 @media screen and (max-width: 1710px) {
 
   .slide-desc {
@@ -203,6 +185,7 @@ h1 {
 }
 
   @media screen and (max-width: 1235px) {
+
 
   .slide-desc {
     transform: translate(20%, 40%);
@@ -290,7 +273,6 @@ h1 {
 .slider-footer {
     transform: translateY(-20%);
     margin-bottom: 100px;
-
   }
 
   h1 {
