@@ -39,8 +39,8 @@ export default {
 <style lang="scss" scoped>
 
 * {
-  margin-top: 0px;
-  padding: 0px;
+  margin-top: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -57,40 +57,40 @@ nav {
 .links {
   display: flex;
   justify-content: space-around;
-}
 
-.links li {
-  list-style: none;
-  margin: 0 15px;
-  margin-top: 10px;
-}
-
-.links a {
-  color: $black-primary;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-  padding: 24px 10px;
-  &:hover {
-    border-bottom: 5px solid $yellow-primary;
-    color: $yellow-primary;
-    margin-top: 5px;
+  li {
+    list-style: none;
+    margin: 0 1em;
+    margin-top: .8em;
   }
-  &:focus {
-    outline: none;
-    box-shadow: none;
+
+  a {
+    color: $black-primary;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 1.5em .8em;
+    &:hover {
+      border-bottom: .3em solid $yellow-primary;
+      color: $yellow-primary;
+      margin-top: .3em;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
   }
 }
 
 .burger {
   display: none;
-}
 
-.burger div {
-  width: 25px;
-  height: 3.5px;
-  background-color: $black-primary;
-  margin: 5.5px;
+  div {
+    width: 1.5em;
+    height: .26em;
+    background-color: $black-primary;
+    margin: .2em;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -100,15 +100,15 @@ nav {
     margin: 0px;
 
     li {
-      margin: 0 5px;
+      margin: 0 .2em;
     }
 
     a {
-      font-size: 13px;
-      padding: 30px 10px;
+      font-size: .8em;
+      padding: 1.5em 0.7em;
       &:hover {
         color: $yellow-primary;
-        border-bottom: 5px solid $yellow-primary;
+        border-bottom: .3em solid $yellow-primary;
       }
     }
   }
@@ -119,14 +119,14 @@ nav {
   nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 35px;
+    margin: 0 2em;
   }
 
   .links {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 0;
     margin-top: 9vh;
     height: calc(100% - 9vh);
@@ -139,7 +139,7 @@ nav {
     transition: transform 0.5s ease-in;
 
     li {
-      margin: 10px 0;
+      margin: .7em 0;
     }
 
     a {
@@ -166,7 +166,7 @@ nav {
   nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 15px;
+    margin: 0 1em;
   }
 }
 </style>

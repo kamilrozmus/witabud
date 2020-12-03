@@ -75,7 +75,7 @@ export default {
 
 h1 {
   font-size: 55px;
-  margin-left: 10px;
+  margin-left: 0.625em;
   text-transform: uppercase;
   .name {
     font-size: 35px;
@@ -86,10 +86,10 @@ h1 {
 .slider-btn {
   position: relative;
   border: transparent;
-  margin: 10px;
+  margin: 0.625em;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1em;
   opacity: 100%;
   line-height: 145%;
   font-weight: 800;
@@ -161,7 +161,7 @@ h1 {
   filter:brightness(30%);
 }
 
-@media screen and (max-width: 1710px) {
+@media screen and (max-width: 170.625em) {
 
   .slide-desc {
     transform: translate(20%, 60%);
@@ -172,7 +172,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1410px) {
+@media screen and (max-width: 140.625em) {
 
   .slide-desc {
     transform: translate(20%, 40%);
@@ -197,10 +197,10 @@ h1 {
 
   h1 {
     font-size: 35px;
-    margin-left: 10px;
+    margin-left: 0.625em;
     text-transform: uppercase;
     .name {
-      font-size: 25px;
+      font-size: 1.55em;
     }
   }
 
@@ -251,7 +251,7 @@ h1 {
     .name {
       transform: translateX(12%);
       margin: auto;
-      font-size: 25px;
+      font-size: 1.55em;
     }
   }
 
@@ -277,7 +277,7 @@ h1 {
 
   h1 {
     font-size: 28px;
-    margin-left: 10px;
+    margin-left: 0.625em;
     text-align: justify;
     text-transform: uppercase;
     transform: translate(5%, -25%);
@@ -291,9 +291,9 @@ h1 {
 
   .slider-btn {
     transform: translate(45%, -45%);
-    font-size: 10px;
+    font-size: 0.625em;
     &.service {
-      width: 120px; 
+      width: 11.25em;
     }
     &.phone {
       width: 180px;
@@ -306,7 +306,7 @@ h1 {
 
 h1 {
     font-size: 28px;
-    margin-left: 10px;
+    margin-left: 0.625em;
     text-align: justify;
     text-transform: uppercase;
     transform: translate(1%, -25%);
@@ -320,9 +320,9 @@ h1 {
 
   .slider-btn {
     transform: translate(18%, -45%);
-    font-size: 10px;
+    font-size: 0.625em;
     &.service {
-      width: 120px; 
+      width: 11.25em;
     }
     &.phone {
       width: 180px;
@@ -349,14 +349,14 @@ h1 {
   h1 {
     padding-top: 100px;
     font-size: 30px;
-    margin-left: 10px;
+    margin-left: 0.625em;
     text-align: justify;
     text-transform: uppercase;
     transform: translate(-10%, -45%);
     .name {
       transform: translate(18%, -40%);
       margin: auto;
-      font-size: 22px;
+      font-size: 1.375em;
     }
   }
 
@@ -385,7 +385,7 @@ h1 {
   h1 {
     padding-top: 100px;
     font-size: 28px;
-    margin-left: 10px;
+    margin-left: 0.625em;
     text-align: justify;
     text-transform: uppercase;
     transform: translate(-14%, -45%);
@@ -393,7 +393,7 @@ h1 {
     .name {
       transform: translate(22%, -40%);
       margin: auto;
-      font-size: 22px;
+      font-size: 1.375em;
     }
   }
 

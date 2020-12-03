@@ -2,23 +2,23 @@
   <footer>
     <div class="content">
       <div class="info">
-        <div class="info-content">
-          <div class="header">
+        <div class="info__content">
+          <div class="info__header">
             <v-img src="@/assets/img/logo-white.png" style="width: 200px;" />
           </div>
           <div class="contact">
-            <div class="item">
+            <div class="contact__item">
               <div>Witold Goj</div>
               <div>ul. Krakowska 25/17</div>
               <div>32-500 Katowice</div>
             </div>
-            <div class="item mt-6">
+            <div class="contact__item mt-6">
               <div>KRS 000000002131</div>
               <div>NIP 2314214123</div>
             </div>
-            <div class="item mt-6">
+            <div class="contact__item mt-6">
               <div>Tel. +48 698 854 741</div>
-              <div>E-mail: <span class="mail">kontakt@witabud.pl</span></div>
+              <div>E-mail: <span class="contact__item--mail">kontakt@witabud.pl</span></div>
             </div>
           </div>
           <div class="media">
@@ -32,7 +32,7 @@
             </div>
           </div>
           <div class="menu">
-            <ul class="links">
+            <ul class="menu__links">
             <li><a href="#">Strona główna</a></li>
             <li><a href="#">O firmie</a></li>
             <li><a href="#">Usługi</a></li>
@@ -61,10 +61,10 @@ footer {
   margin: 0;
   padding: 0;
   color: white;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
-.header {
+.info__header {
   margin: 35px 0;
 
 }
@@ -75,11 +75,11 @@ footer {
   width: auto;
 }
 
-.links {
+.menu__links {
   display: flex;
   justify-content: space-between;
   padding: 0 0 30px 0;
-  font-size: 12px;
+  font-size: 0.75em;
 
   li {
     list-style: none;
@@ -97,7 +97,7 @@ footer {
   justify-content: space-between;
   margin: 35px 0;
 
-  .mail {
+  &__item--mail {
     color: $yellow-primary;
   }
 }
@@ -119,7 +119,8 @@ footer {
   padding-top: 85px;
   padding-bottom: 130px;
   height: 100%;
-  .info-content {
+
+  &__content {
     min-width: 550px;
     padding-right: 50px;
   }
@@ -139,7 +140,7 @@ footer {
 @media screen and (max-width: 1024px) {
 
   .info {
-    padding-bottom: 120px;
+    padding-bottom: 11.25em;
   }
 
   footer {
@@ -171,12 +172,12 @@ footer {
 
   .info {
     width: 100vw !important;
-    .info-content {
+    &__content {
       min-width: 370px;
     }
   }
 
-  .links {
+  .menu__links {
     font-size: 9px;
   }
 }

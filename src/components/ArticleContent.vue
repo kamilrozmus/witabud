@@ -25,7 +25,7 @@
           <input placeholder="Imie i nazwisko"/>
           <input placeholder="Email lub telefon"/>
           <input placeholder="Temat"/>
-          <input placeholder="Treść"/>
+          <input placeholder="Treść" style="height: 11.25em;"/>
           <button class="yellow-btn">Wyślij</button>
         </div>
         <div class="side-article">
@@ -127,7 +127,7 @@ export default {
     margin: 0 auto;
     text-transform: uppercase;
     height: 100%;
-    font-size: 25px;
+    font-size: 1.55em;
   }
 }
 
@@ -161,7 +161,7 @@ export default {
 }
 
 .side-article {
-  background: grey;
+  background: $dirty-white;
   padding: 40px;
   margin-top: 35px;
 
@@ -172,15 +172,15 @@ export default {
 }
 
 input {
-  background: white;
+  background: $white-primary;
   height: 40px;
   width: 100%;
   padding: auto;
-  margin: 15px 0;
+  margin: 1em 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-indent: 20px;
+  text-indent: 1.25em;
 }
 
 .yellow-btn {
@@ -189,11 +189,11 @@ input {
   font-weight: bold;
   border: 2px solid $yellow-primary;
   padding: 14px 28px;
-  margin: 20px 0 45px 0;
+  margin: 1.25em 0 45px 0;
 }
 
 .buttons-bg {
-  background: rgb(243, 240, 240);
+  background: $dirty-white;
   padding: 40px 0;
 
   .buttons {
@@ -205,7 +205,7 @@ input {
 
 .service-btn {
   display: block;
-  margin: 0 15px;
+  margin: 0 1em;
   color: $black-primary;
   font-weight: bold;
   width: 200px;
@@ -247,7 +247,7 @@ input {
 
   .service-btn {
     width: 130px;
-    font-size: 12px;
+    font-size: 0.75em;
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="reviews-panel">
     <div class="childs">
-      <div class="child my-5">
+      <div class="childs__child my-5">
         <v-avatar class="mt-6">
           <img
             src="https://picsum.photos/200"
@@ -64,11 +64,11 @@ export default {
     display: flex;
     justify-content: center;
 
-    .child {
+    &__child {
       display: flex;
       border: 0.1px solid $contrast-black;
       padding: 14px 28px;
-      margin: 0 10px;
+      margin: 0 0.625em;
 
       .v-avatar img {
         border: 2px solid $yellow-primary;
@@ -89,7 +89,7 @@ export default {
     .childs {
       margin: 0 40px;
 
-      .child {
+      &__child {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -106,12 +106,12 @@ export default {
 @media screen and (max-width: 768px) {
 
   .childs {
-    margin: 0 20px;
+    margin: 0 1.25em;
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
 
-    .child {
+    &__child {
       width: 80vw;
       text-align: center;
       .v-avatar {
@@ -129,7 +129,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
 
-    .child {
+    &__child {
       text-align: center;
 
       .v-avatar {

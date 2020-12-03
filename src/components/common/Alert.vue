@@ -36,7 +36,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 15px 0 15px;
+  padding: 1em 0 1em;
   background-color: $yellow-primary;
   width: 100vw;
   height: 70px;
@@ -58,7 +58,7 @@ export default {
   .phone {
     display: flex;
     justify-content: space-between;
-    font-size: 23px;
+    font-size: 1.43em;
     color: $black-primary;
     font-weight: bold;
     margin-top: 5px;
@@ -79,7 +79,7 @@ export default {
   .alert {
     height: 100px;
     .message {
-      font-size: 22px;
+      font-size: 1.375em;
     }
 
     .phone {
@@ -94,7 +94,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px 0 15px;
+    padding: 1.25em 0 1em;
     height: 150px;
 
     .message {

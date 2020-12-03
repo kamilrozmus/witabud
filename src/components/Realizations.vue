@@ -77,10 +77,10 @@ export default {
 
 .header {
   width: 20%;
-  margin-right: 20px;
+  margin-right: 1.25em;
   transform: translate(150px, 60px);
   h1 {
-    font-size: 22px;
+    font-size: 1.375em;
     text-transform: uppercase;
   }
   p {
@@ -105,12 +105,12 @@ export default {
 
   .header {
     width: 90vw;
-    transform: translateX(10px);
+    transform: translateX(0.625em);
     .header-title {
       display: flex;
       justify-content: space-between;
       p {
-        margin-left: 20px;
+        margin-left: 1.25em;
         margin-top: 1%;
       }
 

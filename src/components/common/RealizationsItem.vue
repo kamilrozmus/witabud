@@ -31,13 +31,13 @@ export default {
 }
 
 .item-done {
-  padding: 25px;
+  padding: 1.55em;
   width: 300px;
 
   .text {
     border: 1px solid grey;
     border-top: transparent;
-    padding: 20px;
+    padding: 1.25em;
   }
 
   img {
@@ -72,10 +72,10 @@ export default {
     .header-title {
       display: flex;
       justify-content: space-between;
-      margin-top: 20px;
+      margin-top: 1.25em;
 
       p {
-        margin-left: 20px;
+        margin-left: 1.25em;
         margin-top: 1%;
       }
     }
@@ -87,15 +87,15 @@ export default {
   }
 
   .item-done {
-    margin: 0 20px;
+    margin: 0 1.25em;
     flex: 1 1 100%;
     display: flex;
-    padding: 25px;
+    padding: 1.55em;
 
     .text {
       border: 1px solid grey;
       border-left: transparent;
-      padding: 20px;
+      padding: 1.25em;
     }
 
     img {
@@ -130,7 +130,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    margin-right: 20px;
+    margin-right: 1.25em;
 
     .header-title {
       display: flex;
@@ -162,7 +162,7 @@ export default {
     .text {
       border: 1px solid grey;
       border-top: transparent;
-      padding: 20px;
+      padding: 1.25em;
     }
   }
 
